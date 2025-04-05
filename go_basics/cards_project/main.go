@@ -4,20 +4,15 @@ import "fmt"
 
 func main() {
 
-	// var card string = "Ace of strings"
-	//card := "Ace of strings" //only during the initialization we have to use := for next stime we can use "="
-	//card = "new value"
-	card := newCard //to get return from the function
-	fmt.Println(card)
-	//fmt.Println(newCard()) //VALID
-}
+	cards := newDeck()
 
-// bool - True pr False
-// string - "Hi" or " Hows it is going"
-//int - 0 , -10000,99999
-//float64 - 10.00001, 0.00009, -100.003
+	//cards.print()
 
-func newCard() string { //need to specify the type of datatype it will return
+	hand, remainingDeck := deal(cards, 5) //calling func deal with args
+	//which has two return variable s given so two retrun O/P is given
 
-	return "Five of diamonds"
+	hand.print()
+	fmt.Println("handful cards selected")
+	remainingDeck.print()
+
 }
