@@ -1,18 +1,12 @@
 package main
 
-import "fmt"
-
 func main() {
 
-	cards := newDeck()
+	// cards := newDeck()
+	// //fmt.Println(cards.toString())
+	// cards.saveToFile("my_cards") //to save file to hardware
 
-	//cards.print()
-
-	hand, remainingDeck := deal(cards, 5) //calling func deal with args
-	//which has two return variable s given so two retrun O/P is given
-
-	hand.print()
-	fmt.Println("handful cards selected")
-	remainingDeck.print()
+	cards := newDeckFromFile("my_cards")
+	cards.print()
 
 }
