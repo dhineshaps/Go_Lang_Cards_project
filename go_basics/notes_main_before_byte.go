@@ -14,3 +14,4 @@ func main() {
 	hand.print()
 	fmt.Println("handful cards selected")
 	remainingDeck.print()
+}
